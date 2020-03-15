@@ -1,0 +1,5 @@
+# LINKS #
+
+BTT Marlin fork for SKR Mini E3 (https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V1.2/Marlin-2.0.x-SKR-Mini-E3-V1.2)
+
+KAY3D Compile Instructions (https://kay3d.com/pages/editing-and-compiling-kay3d-cheetah-5-firmware-on-visual-studio-code)
