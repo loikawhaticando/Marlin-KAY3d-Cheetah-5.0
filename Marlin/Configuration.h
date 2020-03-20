@@ -270,25 +270,25 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 /*** *** *** Section 12 - Choose your Fan Duct that you used to mount the ABL. Only for Ender-3/Pro at the moment. You should only have one active selection here. Ignore if you don't have a auto bed levelling sensor *** *** ***/ 
 
 //#define Herome_fanduct_40105015 //choose this if you use the hero me fan duct from thingiverse with single 4010 or 5015 fan. thing: 3182917
-#define Herome_fanduct_dual5015 //choose this if you use the hero me fan duct from thingiverse with dual 5015 fans. thing: 3182917
+//#define Herome_fanduct_dual5015 //choose this if you use the hero me fan duct from thingiverse with dual 5015 fans. thing: 3182917
 //#define Bltouch_creality_kit //choose this if you are using the original bltouch mount from Creality's BLTouch kit
 //#define Petsfang_fanduct //choose this if you use the petsfang duct from thingiverse. thing: 2759439
 //#define Simple_bltouch_mount //thingiverse: thing:3148733 Only works with stock & microswiss hotend. Use above mounts for other hotends such as E3D V6/ Mosquito
-//#define Custom_ABL_mount //If you do not use any of these mounts on an Ender 3 or have another machine, uncomment this to declare your own probe to nozzle values
+#define Custom_ABL_mount //If you do not use any of these mounts on an Ender 3 or have another machine, uncomment this to declare your own probe to nozzle values
 
 /*if have a Custom ABL mount and need to put your own values, please use change_value to define your values below. If not, skip this section and continue below*/
 #if ENABLED(Custom_ABL_mount) 
-  #define NOZZLE_TO_PROBE_OFFSET { change_value, change_value, 0 } //Measure the distance between the centre of your probe to the nozzle and replace 'change_value'. KEEP the value 0 there so you can do your z probe offset calibration. Only replace 0 if you know your values. Otherwise your nozzle may CRASH.
+  #define NOZZLE_TO_PROBE_OFFSET { -50, -18, 0 } //Measure the distance between the centre of your probe to the nozzle and replace 'change_value'. KEEP the value 0 there so you can do your z probe offset calibration. Only replace 0 if you know your values. Otherwise your nozzle may CRASH.
 #endif
 
 /*** *** *** Section 13A - Filament Change Settings. This is where you configure your Filament change/ Pause settings *** *** ***/
 
 #define ADVANCED_PAUSE_FEATURE  //Activate this feature if you want to have Filament change and Pause enabled.
 //#define Nozzle_topright_park // Nozzle is Automatically parked on top left of bed by default during pause & filament change. Define this if you want the nozzle to be parked on the top right instead.
-#define Total_filament_path 30 // TODO fix this value // Please measure the entire distance fron the Extruder to the the tip of the nozzle as accurately as possible. Replace change_value with your measured value here in mm units. NOT ft/inch.
+#define Total_filament_path 97 // Please measure the entire distance fron the Extruder to the the tip of the nozzle as accurately as possible. Replace change_value with your measured value here in mm units. NOT ft/inch.
 
 /*** *** *** Section 13B - Additional Sensors. E.g. Filament Sensors. This is where you activate and define your settings *** *** ***/
-// TODO consider installing this //#define FILAMENT_RUNOUT_SENSOR // Define this if you have a filament sensor. Please ensure it is connected to your mainboard and NOT your TFT
+//#define FILAMENT_RUNOUT_SENSOR // Define this if you have a filament sensor. Please ensure it is connected to your mainboard and NOT your TFT
 //#define INVERT_FS_LOGIC // Define this ONLY if filament sensor is not detecting filament correctly. 
 //#define INVERTL_PINPULLUP_LOGIC //Define this ONLY if your filament sensor does not work even after defining INVERT_FS_LOGIC
 
