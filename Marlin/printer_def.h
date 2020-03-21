@@ -395,3 +395,20 @@
   #define INVERT_Z_DIR true
   #endif
 #endif
+
+#if ENABLED(INVERT_XY) //function swaps X and Y axis, not Z or E0. E0 found in seciton 13.
+  #if (INVERT_X_DIR == true)
+  #undef INVERT_X_DIR
+  #define INVERT_X_DIR false
+  #else
+  #undef INVERT_X_DIR
+  #define INVERT_X_DIR true
+  #endif
+  #if (INVERT_Y_DIR == true)
+  #undef INVERT_Y_DIR
+  #define INVERT_Y_DIR false
+  #else
+  #undef INVERT_Y_DIR
+  #define INVERT_Y_DIR true
+  #endif
+#endif
